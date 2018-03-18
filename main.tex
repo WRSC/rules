@@ -1,0 +1,415 @@
+\title{World Robotic Sailing Championship 2018 \\
+Notice of race and competition rules \\V0.1}
+\date{\today}
+\documentclass[12pt]{article}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+The World Robotic Sailing Championship 2018 will be organized in Southampton,
+UK, from 26\textsuperscript{th} to 30\textsuperscript{th} of August.
+The World Robotic Sailing Championship will be followed by
+the International Robotic Sailing Conference that will be held on August
+31\textsuperscript{st} and September 1\textsuperscript{st} at the University of
+Southampton.
+The organizing committee invites teams from any organization, including private
+individuals, schools, colleges, universities and companies, to enter the competition. 
+Each team competes with one boat; the team members can be shared among different teams. 
+The championship will be organized in 4 challenges, each one tentatively allocated to a single day.
+
+\section{Classes}
+
+The World Robotic Sailing Championship is open to boats propelled entirely by
+wind. The boats
+must use only the energy of the wind as the propulsion force (and, indirectly,
+also the wave
+energy). Besides the more traditional soft or rigid sailing rigs, the wind
+energy may also be used
+to power a propeller or a paddle-wheel driven by a wind turbine. The coupling
+between the
+wind turbine and the propeller may be done either by mechanical or electrical
+means, providing
+that it is not possible to use any kind of energy stored on board to drive the
+propeller. The
+participants must be able to clearly demonstrate this to the RaceCommittee.
+The boats may use any type of hull (mono or multi) and any type of rig, with one
+or more soft
+or rigid sails. The beam of multi-hulls should not exceed their LOA and the
+maximum draft of
+any boat should be limited to 2 m. Hydrofoils are allowed, although these
+appendages cannot
+be installed or removed manually to configure one boat for the different
+challenges.
+
+The two classes considered in WRSC 2017 are:
+Micro-sailboats (MS)
+Small autonomous sailboats up to 1.5 m LOA and weighting no more than 100 kg.
+Sailboats (S)
+Autonomous sailboats which do not fit in the micro-sailboats category, up to
+4.2 meters LOA and weighting no more than 500 kg.
+
+\section{Liability and Safety}
+All sailing robots must be controllable by a designated human helmsman
+throughout all events.
+The responsibility for avoiding any collision, damage or personal injuries will
+rest solely with
+the respective teams. The organizers will not assume any liability with respect
+to third party
+damages, personal injuries or environmental contamination resulting from any
+activity of a
+team participating in the WRSC. All teams are responsible for their own safety
+during the event
+and the decision to participate or not in the competitions is of the exclusive
+responsibility of
+the team members.
+Each team will nominate a person of contact (POC) that will be requested to sign
+a term of
+responsibility where she/he assumes all the responsibility of any damage, injury
+or
+environmental contamination that will result from any activity of her/his team,
+including the
+operation of their autonomous sailboat.
+All sailing boats will be under the supervision of a motor boat provided by the
+organization. At
+least one person per team is guaranteed a seat in a motor boat, and a motor boat
+will be shared
+by no more than two teams at the same time. All people on board of a motor boat
+must follow
+the safety instructions of the driver and must provide their own personal
+floatation device
+which must be worn at all times while on the water. The safety crews reserve the
+right to
+manage the fleet of support boats, and can refuse access to the support boats,
+in certain
+circumstances. Similarly, any team member entering the pontoons must follow the
+safety
+instructions of the shore crew and the marina personnel. The organization
+reserves the right to
+refuse access to restricted areas of the marina.
+For safety reasons, the race area will be confined to a region delimited by 4
+marks. Figure 1
+shows approximately the area requested for WRSC that may be subject to last
+minute
+adjustments.
+
+
+\section{Collisions and Right of Way}
+Autonomous boats have right of way over manually controlled boats. In the event
+of a potential
+collision, then COLREGs rules must be followed (for example, a boat on a
+starboard tack has
+right of way, etc). However, all competitors must take appropriate actions to
+avoid collisions
+and having right of way is not an acceptable excuse for allowing a collision to
+take place.
+
+\section{Scoring}
+
+The WRSC is organized with 4 contests scheduled for each day of the event: fleet
+race, station
+keeping, area scanning and obstacle avoidance. The scoring for each contest will
+be based on
+automatic tracked data to establish a ranking (1st to Nth position) that will
+measure the relative
+ability to accomplish each task. A sailboat that decides not participating in a
+contest, or not
+being able to fulfil the minimum objectives defined for each one, will be given
+a ranking equal
+to the number of sailboats registered in its category plus 1. Whenever possible
+the results will
+be posted in the Race Office at the end of each day.
+Each challenge will give a prize for the first place in each class and the
+absolute winner of the World Robotic Sailing Championship will be declared the
+team/sailboat with the lowest sum of
+the rankings obtained in each competition.
+
+\section{Tracking}
+Although the tracking devices developed by ENSTA Bretagne will be used again in
+WRSC2017,
+the competing boats should be able to provide the organization the basic
+tracking data recorded
+from their own global navigation satellite system (e.g. GPS). As the scoring
+process will be
+based on the course done by each boat, it will be preferable to use the actual
+position data
+processed by the boat’s navigation system to prevent possible deviations
+resulting from the
+different location data produced by the trackers and the boat’s navigation
+system.
+The tracking data to be provided by each boat should include a timestamp and the
+lat/lon
+coordinates, with not less than one track point per second. This data must be
+provided in one
+of the following formats:
+ A CSV (comma-separated values) text file with three decimal integer numbers
+per line
+representing “hhmmssdd, Lat*107, Lon*107
+” (hhmmssdd represents the hour,
+minute, second and day of the month). For example, the entry “14233407,
+416887091, -88259850” means 14h23m34s of day 7 (of September – note the month
+is not logged), lat=41.6887091º (north) and lon = -8.8259850º (west) ); 9h of
+recording
+will need approximately 1MByte of data.
+ The same format as above but using 3 digits for the field representing the
+seconds,
+where the third digit (rightmost) represents the decimal part of seconds. For
+example,
+the record “142334807, 416887091, -88259850” means 14h23m34.8s of day 7
+of September, lat=41.6887091º (north) and lon = -8.8259850º (west)).
+ A CSV (comma-separated values) text file with three decimal integer numbers
+per line
+representing “GPS\_miliseconds-of-the-week, Lat*107, Lon*107
+”, where the
+field “GPS\_miliseconds-of-the-week” represents the number of miliseconds since
+the 00h00m of last Sunday. For example, the entry “317009123, 416887091, -
+88259850” means 16h03m29.123s of Wednesday (day 3), lat=41.6887091º (north) and
+lon = -8.8259850º (west) );
+ For any of the 3 formats referred above: a binary file with 12-byte records
+representing
+the three 32-bit signed integers (in two’s complement), in little-endian or
+big-endian
+byte order (the team has to specify which little- or big-endian format is used).
+This
+format will require approximately 388 KByte of data for logging 9h.
+
+\section{Wind and time limits}
+The competitions will run only with a minimum sustained wind speed of 6 knots
+(approx. 3m/s)
+and a maximum gust wind speed of 20 knots. The time limits indicated in the
+detailed
+description of each challenge may be adjusted according to the actual wind
+conditions observed
+in the course area.
+
+\section{Measurement units}
+Lat/Lon: degrees in decimals, e.g. 60.3456º (chart datum: WGS-84)
+Distance: meters
+Angles: degrees
+
+\section{Competitions}
+WRSC will be organized with 4 competitions, in a similar way to the previous
+WRSC editions.
+Two course areas may be set in different regions, using smaller courses for the
+micro-sailboat
+class and larger regions for the sailboat class. The precise locations will be
+defined only a few
+days before the event, according to the regional short-term weather forecast.
+The next sections
+detail the rules for each of the competitions.
+
+\subsection{Fleet race}
+
+All boats will sail together around a triangular course with legs ranging
+between 100m and
+400m. Figure 2 shows a possible location and format of course for the fleet
+race. The two
+classes will compete separately, with a shorter course for the micro-sailboat
+class.
+\subsubsection{Scoring}
+
+If a boat succeeds completing the whole course, it will be scored by its arrival
+order. If not,
+boats will be scored according to the number of marks reached in the correct
+order and the
+order of arrival to that mark. As usual in previous WRSC, the start procedure
+will be done
+manually, either by having the boats under manual control and switching to
+automatic control
+at the start sign, or by holding the boat behind the start line and releasing it
+at the start signal.
+If the weather conditions are favorable, up to two fleet races will be done for
+each class,
+summing the resulting individual scoring. A mark/buoy is considered reached if
+at least one
+track point is recorded within a radius of 5m around the position of the
+(virtual) buoy.
+Remote control is allowed during the course exclusively to avoid imminent
+collisions and only
+for the boat with no right of way. Alternatively, a collision may also be
+prevented by holding
+manually the boat with no right of way, but ensuring that its position and
+heading is maintained
+until the risk of collision has passed. In the case a boat gets entangled with a
+buoy or any other
+floating debris (seaweed, lines, fishing nets, etc) it can be assisted manually,
+as long as no
+advantage is given to the boat.
+
+\subsubsection{Minimum objective}
+To be considered for the scoring, a sailboat must complete at least the first
+leg, from the start
+line to the first buoy.
+
+\subsubsection{Time limit}
+
+The time limit for this race will be set to a maximum of 60 mins.
+
+\subsection{Station keeping}
+The station keeping (or virtual anchoring) contest will use a single waypoint P
+(see figure 3).
+The sailing boats will have to keep navigating as close as possible to that
+waypoint during 5
+minutes after entering a circle with a radius R=20m around that waypoint.
+
+\subsubsection{Scoring}
+An individual score will be calculated as the minimum radius Rmin centered in
+another point Pc
+that contains 95% of the points logged (by the boat or the by the tracking
+devices), normalized
+to the length overall (LOA) of the boat (Rmin/ LOA). To account for the GPS
+error, Pc will be
+considered instead of P, where Pc is obtained as the average of the coordinates
+of all the points
+registered during the 5 minutes after entering the circle with a radius R=20m
+(green dots in
+figure 3). To be qualified in this contest, the point Pc must be inside the red
+circle, regardless
+of the positions of the points recorded during the 5 minute period.
+Figure 3 illustrates this procedure. The sailboat track is considered during 5
+minutes after
+entering the red circle (20m radius, centered in the reference waypoint P); the
+average of the
+coordinates of all recorded track points during the 5 mins (green dots) gives
+point Pc; the score
+is calculated with the radius of the blue circle centered in Pc that contains
+95% of the valid
+track points. The contest starts by releasing the sailing boat at least 40m away
+from the
+reference waypoint P. Depending on the weather conditions, a maximum of 3
+attempts may be
+done by each sailboat and the best score among the three attempts will be used
+to build the
+final ranking for this challenge.
+\subsubsection{Minimum objective}
+To be scored in this contest the sailing boat must stay within the R=20m circle
+(red circle)
+during the first minute after entering it; also, the final point Pc must be
+inside that red circle.
+\subsubsection{Time limit}
+The total time limit for this contest is 10 minutes: after the start signal,
+boats will have 5
+minutes to enter the red circle and then 5 minutes to complete the challenge.
+
+\subsection{Area scanning}
+
+The objective of the area scanning contest is to measure the ability of the
+sailboats to perform
+a navigation path suitable to sample a closed region. The course area will be
+divided in 20m x
+20m squares and the objective is to visit as many squares as possible, within
+the maximum
+allowed time. A square is considered visited if at least one track point is
+registered within that
+square.
+The challenge starts when the sailboat enters the start line and finishes when
+the sailboat
+crosses the finish line, before exhausting the maximum time allowed for this
+challenge (30
+mins). Boats will be ranked by counting first the number of squares visited and
+then comparing the percentage of the track points that are within the course
+area, delimited by the
+blue line in figure 4. The boats not crossing the start line will be classified
+DNS (did not start)
+and assigned a ranking position equal to the number of boats registered in that
+class plus one.
+The boats that start the course but do not succeed to cross the finish line
+within the maximum
+time will be scored DNF (did not finish) and assigned a ranking equal to the
+number of registered
+boats in his class. The course area will be set as a “L” shape region composed
+by 75 squares, arranged as a 200m
+x 100m rectangle (50 squares) and a 100m x 100m adjacent square (25 squares), as
+shown in
+figure 4. The course for the micro-sailboat (MS) class will be smaller, with
+160m x 80m plus 80m
+x 80m (total of 48 squares, representing 64% of the larger course). The courses
+will be positioned
+with the large side facing windward, as shown in figure 4.
+
+\subsubsection{Scoring}
+
+Figures 5, 6 and 7 show a few examples of possible courses, with the
+correspondent scores. In
+figure 5 both boats succeed visiting all the 75 squares, but the 1st place will
+be assigned to the
+track on the left because the length of the track outside the course area
+(measured as the
+number of track points) is smaller than the track on the right. Figure 6 show 3
+examples of a
+partial accomplishment of the area-scan challenge and the DNS and DNF situations
+are
+exemplified in figure 7.
+
+\subsubsection{Minimum objective}
+
+To be qualified in this contest, a sailboat must cross the start line and the
+finish line within
+the time limit (illustrated by the rightmost example in figure 6).
+\subsubsection{Time limit}
+The time limit for this challenge is 30 minutes.
+\subsection{Collision avoidance}
+
+The collision avoidance contest will evaluate the ability of a sailing boat to
+detect and deviate
+from an unexpected obstacle appearing in its path. The course area will be set
+with four
+waypoints forming a 150m x 20m rectangle, with one longest side facing windward
+(see figure
+8). Sailboats must enter the rectangle by one of the shortest sides, keep
+sailing within the
+rectangle to the opposite short side, turning back after crossing each short
+side. After
+completing at least two legs, a physical obstacle will be placed in the course
+area before the
+sailboat turns back into its direction.
+
+The obstacle will occupy the whole 20m of the course width and will be placed
+somewhere
+between 50m from each short side (the pink region in figure 8). The sailboat
+should deviate
+from the obstacle, not touching it, and return to the course as soon as possible
+to complete at
+least one more full leg. The “obstacle” will be made with one or two red or
+orange RIBs, towing
+a line with red or orange balloons with gaps between them not larger than 1m.
+After placed in
+position, the RIBs will do their best to maintain the obstacle in place.
+
+\subsubsection{Scoring}
+The sailboats will be scored according to the following table (refer to figure
+9)
+1. the sailboat did not clearly initiate a maneuver to deviate from the
+obstacle: 0 points (red
+path);
+2. the sailboat did start a maneuver to move away from the obstacle, but she
+hits the obstacle: 2
+points (violet);
+the sailboat did deviate from the obstacle not touching it, but failed to return
+to the course
+area within 5 minutes: 5 points (orange);
+4. the sailboat did deviate from the obstacle not touching it and did return to
+the course area,
+but failed to complete the last full leg: 10 points (blue);
+5. the sailboat succeeded completing the obstacle avoidance challenge: 15 points
+
+To break a tie in cases 4 and 5, the number of track points outside the course
+area will be
+considered, as the percentage of the number of track points registered in the
+last full leg. For
+example, if in the last leg (from one short side to the other short side) a
+sailboat has recorded
+100 track points and for avoiding the obstacle she registered 25 track points
+outside the
+course rectangle, she will be scored with 25 (the smaller the better).
+
+\subsubsection{Minimum objective}
+To be scored in this contest a sailboat must keep sailing valid legs, without
+crossing the long
+sides of the rectangle, until the obstacle is positioned.
+
+\subsubsection{Time limit}
+The time limit for this competition will be set to 30 minutes.
+
+\end{document}
+
