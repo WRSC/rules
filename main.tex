@@ -11,6 +11,8 @@ Notice of race and competition rules \\V0.1}
 % - Scoring based on data, measurable success
 % - KISS -> simplify as far as possible
 % - Additive success: No loss of all points, generally no loss of points!
+% - clear and unambiguous: Don't assume things are implied, avoid formulations
+%   that may lead to rule discussions.
 
 \section{Introduction}
 
@@ -249,48 +251,48 @@ To be considered for the scoring, the vessel must complete at least the first
 leg, from the start line to the first buoy.
 
 \subsection{Station keeping}
-The station keeping (or virtual anchoring) challenge will use a single waypoint P
-(see figure 3).
-The sailing boats will have to keep navigating as close as possible to that
-waypoint during 5
-minutes after entering a circle with a radius R=20m around that waypoint.
+Sailing robots have a high potential for use as 'virtual moorings', maintaining
+a fixed position at sea, consuming little energy and without the requirement for
+anchoring at the seafloor. This challenge tests the ability of the competing
+vessels to perform such tasks, whilst also asking for a typical measurement task
+of such a virtual mooring: Estimating wave conditions.
+% FIGURE: station keeping
+The station keeping challenge uses a single waypoint P
+(see figure 3).After entering a circle with radius $R=20m$ around the waypoint, the 
+sailing vessel aims to stay as close as possible to the waypoint for 5 minutes.
+The challenge is started by releasing the sailing boat at least 40m away
+from the waypoint P.
 
 \subsubsection{Scoring}
-An individual score will be calculated as the minimum radius Rmin centered in
-another point Pc that contains 95\% of the points logged (by the boat or the by the tracking
-devices), normalized to the length overall (LOA) of the boat (Rmin/ LOA). 
-To account for the GPS error, Pc will be
-considered instead of P, where Pc is obtained as the average of the coordinates
-of all the points
-registered during the 5 minutes after entering the circle with a radius R=20m
-(green dots in
-figure 3). To be qualified in this contest, the point Pc must be inside the red
-circle, regardless
-of the positions of the points recorded during the 5 minute period.
-Figure 3 illustrates this procedure. The sailboat track is considered during 5
-minutes after
-entering the red circle (20m radius, centered in the reference waypoint P); the
-average of the
-coordinates of all recorded track points during the 5 mins (green dots) gives
-point Pc; the score
-is calculated with the radius of the blue circle centered in Pc that contains
-95\% of the valid
-track points. The contest starts by releasing the sailing boat at least 40m away
-from the
-reference waypoint P. Depending on the weather conditions, a maximum of 3
-attempts may be
-done by each sailboat and the best score among the three attempts will be used
-to build the
-final ranking for this challenge.
+The score is calculated from the positions recorded by a tracker during the 5
+minutes after first recording a position within the 20 m radius around P as
+follows:
+A second point $P_c$ is calculated as the average of the coordinates of all
+positions. To be qualified for scoring, the point $P_c$ must be
+inside the 20 m circle, regardless of the individual positions.
+A circle is fitted around $P_c$, containing 95\% of the positions.
+The radius of this circle around $P_c$ is $R_{min}$, and this radius is used for
+scoring. The score is normalised to the vessel length overall (LOA) as 
+$\frac{R_{min}}{LOA}$. 
+A 5\% reduction of the score can be received for each of the individual
+measurement goals, if the result is within a 20\% margin around 
+the estimates by the race comittee. The measurement goals are
+wave height, wave frequency, wave direction. In total three reductions of 5\%
+each can be achieved. Boats are then ranked by minimum score.
+%Figure 3 illustrates this procedure. The sailboat track is considered during 5
+%minutes after
+%entering the red circle (20m radius, centered in the reference waypoint P); the
+%average of the
+%coordinates of all recorded track points during the 5 mins (green dots) gives
+%point Pc; the score
+%is calculated with the radius of the blue circle centered in Pc that contains
+%95\% of the valid
+%track points. 
+
 \subsubsection{Minimum objective}
-To be scored in this contest the sailing boat must stay within the R=20m circle
-(red circle)
-during the first minute after entering it; also, the final point Pc must be
-inside that red circle.
-\subsubsection{Time limit}
-The total time limit for this contest is 10 minutes: after the start signal,
-boats will have 5
-minutes to enter the red circle and then 5 minutes to complete the challenge.
+To be scored in this contest, the vessel must enter the $R=20m$ circle around P
+and continue to sail autonomously for five minutes after entering. The resulting 
+point $P_c$ must be inside the 20m circle around P.
 
 \subsection{Area scanning}
 
