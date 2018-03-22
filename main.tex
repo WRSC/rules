@@ -2,6 +2,9 @@
 Notice of race and competition rules \\V0.1}
 \date{\today}
 \documentclass[12pt]{article}
+
+\usepackage{tabularx}
+\usepackage{pdflscape}
 \begin{document}
 \maketitle
 
@@ -138,30 +141,62 @@ should be able to provide the race committee with the tracking data recorded
 from their own global navigation satellite system (e.g. GPS), since this will be
 used in case of failure of the official device.
 The tracking data to be provided by each boat should include a timestamp and the
-lat/lon coordinates, with not less than one track point per second. This data must be
-provided in one of the following formats:
-\begin{itemize}
-  \item A CSV (comma-separated values) text file with three decimal integer numbers
-per line representing “hhmmssdd, Lat*107, Lon*107” (hhmmssdd represents the hour,
-minute, second and day of the month). For example, the entry “14233407,
-416887091, -88259850” means 14h23m34s of day 7 (of September – note the month
-is not logged), lat=41.6887091º (north) and lon = -8.8259850º (west) ); 9h of
-recording will need approximately 1MByte of data.
-  \item The same format as above but using 3 digits for the field representing the
-seconds, where the third digit (rightmost) represents the decimal part of seconds. For
-example, the record “142334807, 416887091, -88259850” means 14h23m34.8s of day 7
-of September, lat=41.6887091º (north) and lon = -8.8259850º (west)).
- \item A CSV (comma-separated values) text file with three decimal integer numbers
-per line representing “GPS\_miliseconds-of-the-week, Lat*107, Lon*107
-”, where the field “GPS\_miliseconds-of-the-week” represents the number of miliseconds since
-the 00h00m of last Sunday. For example, the entry “317009123, 416887091, -
-88259850” means 16h03m29.123s of Wednesday (day 3), lat=41.6887091º (north) and
-lon = -8.8259850º (west) );
- \item For any of the 3 formats referred above: a binary file with 12-byte records
-representing the three 32-bit signed integers (in two’s complement), in little-endian or
-big-endian byte order (the team has to specify which little- or big-endian format is used).
-This format will require approximately 388 KByte of data for logging 9h.
-\end{itemize}
+lat/lon coordinates, with not less than one track point per second. 
+This data may be provided either in CSV (comma-separated values) or binary format.
+All CSV format files must use three decimal integer number per line,
+representing: timestamp, $Lat*10^7$, $Lon*10^7$.
+The binary file format uses 12-byte records representing the three 
+32-bit signed integers of the CSV format in two’s complement. The storage order may be
+little-endian or big-endian, the chosen order must be specified by the team.
+The allowed data formats are detailed in table \ref{tab:dataformats}
+\begin{landscape}
+\centering
+\begin{table}
+\caption{Overview of position data formats}
+\label{tab:dataformats}
+\small{
+\begin{tabular}{l|p{6cm}|p{8cm}|r}
+name   & date format & example & 9h recording filesize\\
+\hline
+CSV-2s & hhmmssdd (representing
+the hour hh, minute mm, second ss and day dd of the month) &
+line representing 14:23:34 on the 7th of September (month is not logged!) at lat=41.6887091º (north) and lon = -8.8259850º (west):
+``14233407, 416887091, -88259850'' &
+1 MByte\\ \hline
+
+CSV-3s & hhmmsssdd, using 3 digits for the field representing the
+seconds, where the third digit (rightmost) represents the decimal part of
+seconds & line representing 14:23:34.8 on the 7th of September at
+lat=41.6887091º (north) and lon=-8.8259850º (west):
+``142334807, 416887091, -88259850''&
+1 MByte \\ \hline
+
+CSV-ms & GPS\_miliseconds-of-the-week, the number of miliseconds since 00:00 last Sunday &
+line representing 16:03:29.123 of Wednesday at
+lat=41.6887091º (north) and lon=-8.8259850º (west):
+ “317009123, 416887091, - 88259850”&
+1 MByte\\ \hline
+
+Binary-2s &
+binary file using the CSV-2s format&
+&
+388 KByte \\ \hline
+
+Binary-3s &
+binary file using the CSV-3s format&
+&
+388 KByte\\ \hline
+
+Binary-ms &
+binary file using the CSV-ms format &
+&
+388 KByte\\ \hline
+\end{tabular}
+}
+\end{table}
+\end{landscape}
+
+
 \section{Wind and time limits}
 The challenges will be run only with a minimum sustained wind speed of 6 knots
 (approx. 3m/s)
