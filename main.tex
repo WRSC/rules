@@ -295,62 +295,65 @@ and continue to sail autonomously for five minutes after entering. The resulting
 point $P_c$ must be inside the 20m circle around P.
 
 \subsection{Area scanning}
+In recent years, an increasing number of attempts is made at using maritime
+vessels in collaboration. A typical
+collaborative task is efficiently scanning a large area.
+The collaborative area scanning challenge asks teams to take the abilities and
+scanning goals of other teams into consideration to optimise their own points.
 
-The objective of the area scanning challenge is to measure the ability of the
-sailboats to perform
-a navigation path suitable to sample a closed region. The course area will be
-divided in 20m x
-20m squares and the objective is to visit as many squares as possible, within
-the maximum
-allowed time. A square is considered visited if at least one track point is
-registered within that
-square.
-The challenge starts when the sailboat enters the start line and finishes when
-the sailboat
-crosses the finish line, before exhausting the maximum time allowed for this
-challenge (30
-mins). Boats will be ranked by counting first the number of squares visited and
-then comparing the percentage of the track points that are within the course
-area, delimited by the
-blue line in figure 4. The boats not crossing the start line will be classified
-DNS (did not start)
-and assigned a ranking position equal to the number of boats registered in that
-class plus one.
-The boats that start the course but do not succeed to cross the finish line
-within the maximum
-time will be scored DNF (did not finish) and assigned a ranking equal to the
-number of registered
-boats in his class. The course area will be set as a “L” shape region composed
-by 75 squares, arranged as a 200m
-x 100m rectangle (50 squares) and a 100m x 100m adjacent square (25 squares), as
-shown in
-figure 4. The course for the micro-sailboat (MS) class will be smaller, with
-160m x 80m plus 80m
-x 80m (total of 48 squares, representing 64% of the larger course). The courses
-will be positioned
-with the large side facing windward, as shown in figure 4.
+The scanning task is performed over a large area around the competition, that is
+structured in a grid. The boxes of the grid are assigned coordinates. Not all of
+the scan area may be suitable for all boats, and it is courtesy of the teams to
+choose scan goals suitable for their vessel. The
+challenge runs over an extended time period over which teams can launch and
+recover their vessels repeatedly either by requesting a safety boat (based on
+availability; first come first serve) or by remote controlling the boat from the
+pontoon to a start buoy. If a team wants to recover the boat, they must first
+register the current time with the race committee, so any positions after this
+time can be discarded.
+During the area scanning challenge, the tracker position is made available 
+to all teams via an API. The boats may either access the API directly, update
+highlevel goals (e.g. waypoints) on their vessel remotely or change the software
+on the vessel before launching again after a recovery. Directly controlling the
+actuators (e.g. remote control) is not allowed. The race committee may ask to
+inspect the code determining updates to the vessel and can apply penalties if
+the goal updates are used too excessively.
+The boundaries of the scan area, the grid size, and the challenge start- and end time
+are announced on the morning of the challenge day.
+A bonus can be obtained by providing depth measurements.
+
+TODO: Note, the data formats below are not final yet!
+
+The depth measurements
+must be provided as one value per box, in CSV format giving the x and y grid
+position of the box, the depth estimate and a timestamp for the estimate (the
+timestamp is needed for tide compensation). The timestamp may be in one of the
+three formats that is given in table \ref{tab:dataformats}. 
+
+The API access and format still needs defining
+
+END OF TODO
+
+The area scanning challenge starts at the start time, and ends at the end
+time given by the race committee on the day.
 
 \subsubsection{Scoring}
 
-Figures 5, 6 and 7 show a few examples of possible courses, with the
-correspondent scores. In
-figure 5 both boats succeed visiting all the 75 squares, but the 1st place will
-be assigned to the
-track on the left because the length of the track outside the course area
-(measured as the
-number of track points) is smaller than the track on the right. Figure 6 show 3
-examples of a
-partial accomplishment of the area-scan challenge and the DNS and DNF situations
-are
-exemplified in figure 7.
+A box in the grid is considered visited by a vessel if at least one track point
+of the vessel is registered within that box within the scan time.
+One point is available for each box, the final value of the box is this point 
+divided by the number of vessels that visited the box. 
+Each team receives the final value of all of the boxes that were visited by the
+team. If a team can provide a depth estimate for a box that is within 20\% of
+the race committee reference, a 5\% bonus is added to 
+the final value of the box.
+
+Boats will be ranked by the final score they achieved from boxes visited by
+their vessel.
 
 \subsubsection{Minimum objective}
-To be qualified in this challenge, a sailboat must cross the start line and the
-finish line within
-the time limit (illustrated by the rightmost example in figure 6).
-\subsubsection{Time limit}
-The time limit for this challenge is 30 minutes.
-
+To be qualified in this challenge, a vessel must register at least one track
+point within the scan area during the scan time.
 
 \subsection{Collision avoidance}
 
