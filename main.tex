@@ -356,14 +356,15 @@ To be qualified in this challenge, a vessel must register at least one track
 point within the scan area during the scan time.
 
 \subsection{Collision avoidance}
-
-The collision avoidance challenge will evaluate the ability of a sailing boat to
-detect and deviate
-from an unexpected obstacle appearing in its path. The course area will be set
-with four
-waypoints forming a 150m x 20m rectangle, with one longest side facing windward
-(see figure
-8). Sailboats must enter the rectangle by one of the shortest sides, keep
+When operating in a crowded environment, autonomous sailing vessels must be able
+to operate within a limited area, but also be able to avoid unexpected
+obstacles. The collision avoidance challenge will evaluate the ability of a 
+sailing boat to remain in a predefined channel, detect an unexpected obstacle, 
+deviate from its path for obstacle avoidance and then return to its path again.
+ The course area will be set with four waypoints forming a rectangle with the 
+ longest side facing windward (see figure
+8). 
+Sailboats must enter the rectangle by one of the short sides, keep
 sailing within the
 rectangle to the opposite short side, turning back after crossing each short
 side. After
@@ -371,52 +372,67 @@ completing at least two legs, a physical obstacle will be placed in the course
 area before the
 sailboat turns back into its direction.
 
-The obstacle will occupy the whole 20m of the course width and will be placed
-somewhere
-between 50m from each short side (the pink region in figure 8). The sailboat
-should deviate
-from the obstacle, not touching it, and return to the course as soon as possible
-to complete at
-least one more full leg. The “obstacle” will be made with one or two red or
-orange RIBs, towing
-a line with red or orange balloons with gaps between them not larger than 1m.
-After placed in
-position, the RIBs will do their best to maintain the obstacle in place.
+% FIGURE: insert obstacle avoidance figures here
+The obstacle will occupy a large portion of the course width and will be placed
+somewhere between 50m from each short side (the pink region in figure 8). 
+The sailboat should log the first detection of the obstacle, deviate from its
+original path without touching the obstacle, and return to the course as soon 
+as possible to complete at least one more full leg. 
+The “obstacle” will be made from orange balloons, transported by a motorised
+vessel. The motorised vessel will do its best to stay far from the course,
+keeping the obstacle on the side of the vessel that is pointing away from the
+competing sailing vessel. After being placed in
+position, the motorised vessel will do its best to maintain the obstacle in place.
 
 \subsubsection{Scoring}
-The sailboats will be scored according to the following table (refer to figure
-9)
-1. the sailboat did not clearly initiate a maneuver to deviate from the
-obstacle: 0 points (red
-path);
-2. the sailboat did start a maneuver to move away from the obstacle, but she
-hits the obstacle: 2
-points (violet);
-the sailboat did deviate from the obstacle not touching it, but failed to return
-to the course
-area within 5 minutes: 5 points (orange);
-4. the sailboat did deviate from the obstacle not touching it and did return to
-the course area,
-but failed to complete the last full leg: 10 points (blue);
-5. the sailboat succeeded completing the obstacle avoidance challenge: 15 points
 
-To break a tie in cases 4 and 5, the number of track points outside the course
-area will be
-considered, as the percentage of the number of track points registered in the
-last full leg. For
-example, if in the last leg (from one short side to the other short side) a
-sailboat has recorded
-100 track points and for avoiding the obstacle she registered 25 track points
-outside the
-course rectangle, she will be scored with 25 (the smaller the better).
+The runs are counted relative to the leg that has the obstacle added. Table
+\ref{tab:obstacleActions} lists all actions that can be achieved during the
+obstacle avoidance challenge, the leg during which they can be achieved, and
+what actions are required to be successfully completed before.
+Each successfully completed action is worth 1 point each. The different legs are
+differentiated based on the time of crossing the short end at the start of each leg.
+Where possible, successful actions are determined based on the tracking logs;
+the log of action C may be provided by the team to the race committee in the
+preferred format of the team. For actions D and E the race committee considers 
+feedback from the safety boat
+and the vessel that places the obstacle.
+The teams are ranked by the number of actions achieved, the higher the number
+the better. If multiple teams score a full set of actions, the time spent outside of the
+rectangle during the obstacle avoidance is taken into consideration, the less
+time spent outside of the rectangle, the better. The time is determined from the
+timestamp of the last log position inside the rectangle to the first log position 
+back within the rectangle.
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|p{8cm}|r}
+point & leg & description & requirement \\
+\hline
+\hline
+A & -2 & complete the entire leg within the rectangle & - \\
+\hline
+B & -1 & complete the entire leg within the rectangle & - \\
+\hline
+C & 0  & log the vessel position and time of the first detection of the obstacle & - \\
+\hline
+D & 0 & show visible signs of deviating from the original path & C \\
+\hline
+E & 0 & no collision with the obstacle & C, D\\
+\hline
+F & 0 & return within the square before completion of the leg & C, D, E\\
+\hline
+G & 1 & complete the entire leg within the rectangle & - \\
+\hline
+\end{tabular}
+\caption{Scored actions during the obstacle avoidance challenge.}
+\label{tab:obstacleActions}
+\end{table}
+
 
 \subsubsection{Minimum objective}
-To be scored in this challenge, a sailboat must keep sailing valid legs, without
-crossing the long
-sides of the rectangle, until the obstacle is positioned.
-
-\subsubsection{Time limit}
-The time limit for this challenge will be set to 30 minutes.
-
+To be scored in this challenge, a vessel must enter the rectangle and complete
+at least one leg within the rectangle, or it must log the detection of an
+obstacle in the correct leg.
 \end{document}
 
