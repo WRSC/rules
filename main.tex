@@ -1,10 +1,18 @@
-\title{World Robotic Sailing Championship 2018 \\
-Notice of race and competition rules \\v0.1}
-\date{\today}
 \documentclass[12pt]{article}
 
 \usepackage{tabularx}
 \usepackage{pdflscape}
+\usepackage{float}
+\usepackage{graphicx}
+
+\newcommand{\mypath}{./figures/}
+\graphicspath{\mypath}
+
+
+\title{World Robotic Sailing Championship 2018 \\
+Notice of race and competition rules \\v0.2}
+\date{\today}
+
 \begin{document}
 \maketitle
 % GOALS:
@@ -77,6 +85,8 @@ organisers, the support vessel crew, and the activity centre personnel. The orga
 reserve the right to refuse access to restricted areas.
 For safety reasons, the race area may be confined to a region delimited by 4
 marks. 
+
+
 
 Figure 1
 shows approximately the area requested for WRSC that may be subject to last
@@ -259,9 +269,16 @@ vessels to perform such tasks, whilst also asking for a typical measurement task
 of such a virtual mooring: Estimating wave conditions. The measurement goals are 
 wave height, wave frequency, and wave direction.
 
-% FIGURE: station keeping
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{station-keeping}
+    \caption{Scoring procedure for the station keeping challenge}
+    \label{fig:stationkeeping}
+  \end{figure}
+
 The station keeping challenge uses a single waypoint P
-(see figure 3).After entering a circle with radius $R=20m$ around the waypoint, the 
+(see Figure \ref{fig:stationkeeping}). After entering a circle with radius $R=20m$ around the waypoint, the 
 sailing vessel aims to stay as close as possible to the waypoint for 5 minutes.
 The challenge is started by releasing the sailing boat at least 40m away
 from the waypoint P.
@@ -364,8 +381,7 @@ obstacles. The collision avoidance challenge will evaluate the ability of a
 sailing boat to remain in a predefined channel, detect an unexpected obstacle, 
 deviate from its path for obstacle avoidance and then return to its path again.
  The course area will be set with four waypoints forming a rectangle with the 
- longest side facing windward (see figure
-8). 
+ longest side facing windward (see figure \ref{fig:obstacleavoidance}). 
 Sailboats must enter the rectangle by one of the short sides, keep
 sailing within the
 rectangle to the opposite short side, turning back after crossing each short
@@ -374,7 +390,14 @@ completing at least two legs, a physical obstacle will be placed in the course
 area before the
 sailboat turns back into its direction.
 
-% FIGURE: insert obstacle avoidance figures here
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{obstacle-avoidance}
+    \caption{Course for the obstacle avoidance challenge}
+    \label{fig:obstacleavoidance}
+  \end{figure}
+
 The obstacle will occupy a large portion of the course width and will be placed
 somewhere between 50m from each short side (the pink region in figure 8). 
 The sailboat should log the first detection of the obstacle, deviate from its
