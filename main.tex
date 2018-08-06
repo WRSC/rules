@@ -346,20 +346,19 @@ The boundaries of the scan area, the grid size, and the challenge start- and end
 are announced on the morning of the challenge day.
 A bonus can be obtained by providing depth measurements.
 
-TODO: Note, the data formats below are not final yet!
-
 The depth measurements
-must be provided as one value per box, in CSV format giving the x and y grid
-position of the box, the depth estimate and a timestamp for the estimate (the
+must be provided as one value per box, in CSV format giving a latitude and
+longitude value inside the box,
+the depth estimate and a timestamp for the estimate (the
 timestamp is needed for tide compensation). The timestamp may be in one of the
 three formats that is given in table \ref{tab:dataformats}. 
+If multiple values are given, the first value in the CSV table is used.
 
-The API access and format still needs defining
-
-END OF TODO
+The tracking data of all vessels is available life via the tracking website.
 
 The area scanning challenge starts at the start time, and ends at the end
-time given by the race committee on the day.
+time given by the race committee on the day. The race committee may split the
+challenge into two groups by randomly selecting boats for each group.
 
 \subsubsection{Scoring}
 
